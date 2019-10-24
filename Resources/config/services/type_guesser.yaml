@@ -1,0 +1,9 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    Softspring\DoctrineSimpleTranslationTypeBundle\Form\:
+        resource: '../../../Form/*TypeGuesser'
+        tags: ['form.type_guesser']

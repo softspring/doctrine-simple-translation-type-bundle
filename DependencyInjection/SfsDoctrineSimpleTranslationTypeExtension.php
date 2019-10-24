@@ -16,5 +16,6 @@ class SfsDoctrineSimpleTranslationTypeExtension extends Extension
     {
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config/services'));
         $loader->load('twig_extension.yaml');
+        $loader->load('type_guesser.yaml');
     }
 }
