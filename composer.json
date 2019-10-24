@@ -1,0 +1,16 @@
+{
+    "name": "softspring/doctrine-simple-translation-type-bundle",
+    "type": "symfony-bundle",
+    "description": "This package provides a simple translation type for doctrine using JSON type.",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Softspring\\DoctrineSimpleTranslationTypeBundle\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
