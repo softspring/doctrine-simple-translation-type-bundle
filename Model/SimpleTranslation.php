@@ -1,6 +1,6 @@
 <?php
 
-namespace Softspring\DoctrineSimpleTranslationTypeBundle\Doctrine\Model;
+namespace Softspring\DoctrineSimpleTranslationTypeBundle\Model;
 
 /**
  * Class SimpleTranslation

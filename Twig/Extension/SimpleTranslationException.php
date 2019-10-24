@@ -2,7 +2,7 @@
 
 namespace Softspring\DoctrineSimpleTranslationTypeBundle\Twig\Extension;
 
-use Softspring\DoctrineSimpleTranslationTypeBundle\Doctrine\Model\SimpleTranslation;
+use Softspring\DoctrineSimpleTranslationTypeBundle\Model\SimpleTranslation;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Twig\Extension\AbstractExtension;

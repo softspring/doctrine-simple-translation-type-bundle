@@ -4,7 +4,7 @@ namespace Softspring\DoctrineSimpleTranslationTypeBundle\Doctrine\Type;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\JsonType;
-use Softspring\DoctrineSimpleTranslationTypeBundle\Doctrine\Model\SimpleTranslation;
+use Softspring\DoctrineSimpleTranslationTypeBundle\Model\SimpleTranslation;
 
 /**
  * Class SimpleTranslationType

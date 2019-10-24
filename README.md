@@ -63,7 +63,7 @@ Configure the Doctrine type:
     
 ## Manage the model
 
-The model class is *Softspring\DoctrineSimpleTranslationTypeBundle\Doctrine\Model\SimpleTranslation*.
+The model class is *Softspring\DoctrineSimpleTranslationTypeBundle\Model\SimpleTranslation*.
 
 **Set the default translation**
 
