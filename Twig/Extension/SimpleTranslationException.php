@@ -36,13 +36,17 @@ class SimpleTranslationException extends AbstractExtension
     }
 
     /**
-     * @param SimpleTranslation $translation
-     * @param string|null       $locale
+     * @param SimpleTranslation|array $translation
+     * @param string|null             $locale
      *
      * @return string
      */
-    public function translate(SimpleTranslation $translation, ?string $locale = null): string
+    public function translate($translation, ?string $locale = null): string
     {
+        if (is_array($translation)) {
+            $translation = SimpleTranslation::createFromArray($translation);
+        }
+
         return $translation->translate($locale ?? $this->getRequest()?$this->getRequest()->getLocale() : null);
     }
 
