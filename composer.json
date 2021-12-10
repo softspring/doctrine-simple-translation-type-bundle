@@ -1,8 +1,9 @@
 {
     "name": "softspring/doctrine-simple-translation-type-bundle",
-    "type": "symfony-bundle",
     "description": "This package provides a simple translation type for doctrine using JSON type.",
+    "type": "symfony-bundle",
     "license": "MIT",
+    "minimum-stability": "dev",
     "require": {
         "php": ">=7.4"
     },
