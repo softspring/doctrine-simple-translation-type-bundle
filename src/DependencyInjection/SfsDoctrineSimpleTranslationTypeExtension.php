@@ -16,7 +16,7 @@ class SfsDoctrineSimpleTranslationTypeExtension extends Extension implements Pre
      */
     public function load(array $configs, ContainerBuilder $container)
     {
-        $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config/services'));
+        $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../../config/services'));
         $loader->load('twig_extension.yaml');
         $loader->load('type_guesser.yaml');
     }
