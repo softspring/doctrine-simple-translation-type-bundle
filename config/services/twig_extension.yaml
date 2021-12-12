@@ -5,5 +5,5 @@ services:
         public: false
 
     Softspring\DoctrineSimpleTranslationTypeBundle\Twig\Extension\:
-        resource: '../../../Twig/Extension/*'
+        resource: '../../src/Twig/Extension/*'
         tags: ['twig.extension']

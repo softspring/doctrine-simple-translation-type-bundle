@@ -5,5 +5,5 @@ services:
         public: false
 
     Softspring\DoctrineSimpleTranslationTypeBundle\Form\:
-        resource: '../../../Form/*TypeGuesser'
+        resource: '../../src/Form/*TypeGuesser'
         tags: ['form.type_guesser']
