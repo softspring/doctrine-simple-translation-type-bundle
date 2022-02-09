@@ -7,7 +7,7 @@ use Doctrine\DBAL\Types\JsonType;
 use Softspring\DoctrineSimpleTranslationTypeBundle\Model\SimpleTranslation;
 
 /**
- * Class SimpleTranslationType
+ * Class SimpleTranslationType.
  *
  * Search examples:
  *      translated_name->"$.es" LIKE '%text%' AND translated_name->"$._default" = "en"
@@ -16,7 +16,7 @@ use Softspring\DoctrineSimpleTranslationTypeBundle\Model\SimpleTranslation;
 class SimpleTranslationType extends JsonType
 {
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function getName()
     {
@@ -24,7 +24,8 @@ class SimpleTranslationType extends JsonType
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
+     *
      * @throws \Doctrine\DBAL\Types\ConversionException
      */
     public function convertToDatabaseValue($value, AbstractPlatform $platform)
@@ -37,7 +38,8 @@ class SimpleTranslationType extends JsonType
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
+     *
      * @throws \Doctrine\DBAL\Types\ConversionException
      */
     public function convertToPHPValue($value, AbstractPlatform $platform)
@@ -52,7 +54,7 @@ class SimpleTranslationType extends JsonType
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function requiresSQLCommentHint(AbstractPlatform $platform)
     {

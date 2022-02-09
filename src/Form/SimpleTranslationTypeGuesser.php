@@ -19,7 +19,7 @@ class SimpleTranslationTypeGuesser extends DoctrineOrmTypeGuesser implements For
         /** @var ClassMetadata $metadata */
         list($metadata, $name) = $ret;
 
-        if ($metadata->getTypeOfField($property) == 'simple_translation') {
+        if ('simple_translation' == $metadata->getTypeOfField($property)) {
             return new TypeGuess(SimpleTranslationType::class, [], Guess::VERY_HIGH_CONFIDENCE);
         }
 

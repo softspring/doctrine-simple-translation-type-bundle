@@ -17,8 +17,6 @@ class SimpleTranslationException extends AbstractExtension
 
     /**
      * SimpleTranslationException constructor.
-     *
-     * @param RequestStack $requestStack
      */
     public function __construct(RequestStack $requestStack)
     {
@@ -26,7 +24,7 @@ class SimpleTranslationException extends AbstractExtension
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function getFilters()
     {
@@ -37,9 +35,6 @@ class SimpleTranslationException extends AbstractExtension
 
     /**
      * @param SimpleTranslation|array $translation
-     * @param string|null             $locale
-     *
-     * @return string
      */
     public function translate($translation, ?string $locale = null): string
     {
@@ -47,12 +42,9 @@ class SimpleTranslationException extends AbstractExtension
             $translation = SimpleTranslation::createFromArray($translation);
         }
 
-        return $translation->translate($locale ?? $this->getRequest()?$this->getRequest()->getLocale() : null);
+        return $translation->translate($locale ?? $this->getRequest() ? $this->getRequest()->getLocale() : null);
     }
 
-    /**
-     * @return Request|null
-     */
     protected function getRequest(): ?Request
     {
         return $this->requestStack->getCurrentRequest();

@@ -3,7 +3,7 @@
 namespace Softspring\DoctrineSimpleTranslationTypeBundle\Model;
 
 /**
- * Class SimpleTranslation
+ * Class SimpleTranslation.
  */
 class SimpleTranslation implements \ArrayAccess
 {
@@ -18,8 +18,6 @@ class SimpleTranslation implements \ArrayAccess
     protected $defaultLocale = 'en';
 
     /**
-     * @param array $data
-     *
      * @return SimpleTranslation
      */
     public static function createFromArray(array $data)
@@ -39,42 +37,26 @@ class SimpleTranslation implements \ArrayAccess
         ] + $this->translations;
     }
 
-    /**
-     * @return array
-     */
     public function getTranslations(): array
     {
         return $this->translations;
     }
 
-    /**
-     * @param array $translations
-     */
     public function setTranslations(array $translations): void
     {
         $this->translations = $translations;
     }
 
-    /**
-     * @param string|null $locale
-     * @param string      $translation
-     */
     public function setTranslation(?string $locale, string $translation): void
     {
         $this->translations[$locale ?? $this->getDefaultLocale()] = $translation;
     }
 
-    /**
-     * @return string
-     */
     public function getDefaultLocale(): string
     {
         return $this->defaultLocale;
     }
 
-    /**
-     * @param string $defaultLocale
-     */
     public function setDefaultLocale(string $defaultLocale): void
     {
         $this->defaultLocale = $defaultLocale;
@@ -82,8 +64,6 @@ class SimpleTranslation implements \ArrayAccess
 
     /**
      * @param string $locale
-     *
-     * @return string
      */
     public function translate(string $locale = null): string
     {
