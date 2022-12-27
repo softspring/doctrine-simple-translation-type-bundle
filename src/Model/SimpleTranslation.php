@@ -2,25 +2,13 @@
 
 namespace Softspring\DoctrineSimpleTranslationTypeBundle\Model;
 
-/**
- * Class SimpleTranslation.
- */
 class SimpleTranslation implements \ArrayAccess
 {
-    /**
-     * @var array
-     */
-    protected $translations = [];
+    protected array $translations = [];
 
-    /**
-     * @var string
-     */
-    protected $defaultLocale = 'en';
+    protected string $defaultLocale = 'en';
 
-    /**
-     * @return SimpleTranslation
-     */
-    public static function createFromArray(array $data)
+    public static function createFromArray(array $data): self
     {
         $simpleTranslation = new SimpleTranslation();
         $simpleTranslation->defaultLocale = $data['_default'];
@@ -62,9 +50,6 @@ class SimpleTranslation implements \ArrayAccess
         $this->defaultLocale = $defaultLocale;
     }
 
-    /**
-     * @param string $locale
-     */
     public function translate(string $locale = null): string
     {
         if (!empty($this->translations[$locale])) {
@@ -78,22 +63,22 @@ class SimpleTranslation implements \ArrayAccess
         return '';
     }
 
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return true;
     }
 
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return $this->translations[$offset] ?? '';
     }
 
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         $this->translations[$offset] = $value;
     }
 
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->translations[$offset]);
     }

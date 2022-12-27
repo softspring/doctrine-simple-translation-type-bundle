@@ -6,16 +6,23 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": ">=7.4"
+        "php": ">=8.0",
+        "doctrine/doctrine-bundle": "^2.5",
+        "doctrine/orm": "^2.10",
+        "symfony/form": "^6.2",
+        "symfony/http-kernel": "^6.2",
+        "twig/twig": "^2.0"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "9999999-dev"
+        "friendsofphp/php-cs-fixer": "9999999-dev",
+        "phpstan/phpstan": "^1.9"
     },
     "autoload": {
         "psr-4": {
             "Softspring\\DoctrineSimpleTranslationTypeBundle\\": "src/"
         }
     },
-    "extra": {
+    "config": {
+        "sort-packages": true
     }
 }
