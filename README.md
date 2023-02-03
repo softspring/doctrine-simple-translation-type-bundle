@@ -7,7 +7,7 @@ This package provides a simple translation type for Doctrine, and its Symfony in
 [![License](https://poser.pugx.org/softspring/doctrine-simple-translation-type-bundle/license.svg)](https://packagist.org/packages/softspring/doctrine-simple-translation-type-bundle)
 [![PHP Version Require](http://poser.pugx.org/softspring/doctrine-simple-translation-type-bundle/require/php)](https://packagist.org/packages/softspring/doctrine-simple-translation-type-bundle)
 [![Total Downloads](https://poser.pugx.org/softspring/doctrine-simple-translation-type-bundle/downloads)](https://packagist.org/packages/softspring/doctrine-simple-translation-type-bundle)
-[![Build status](https://github.com/softspring/doctrine-simple-translation-type-bundle/actions/workflows/php.yml/badge.svg?branch=5.0)](https://github.com/softspring/doctrine-simple-translation-type-bundle/actions/workflows/php.yml)
+[![Build status](https://github.com/softspring/doctrine-simple-translation-type-bundle/actions/workflows/php.yml/badge.svg?branch=5.1)](https://github.com/softspring/doctrine-simple-translation-type-bundle/actions/workflows/php.yml)
 
 # Installation
 
