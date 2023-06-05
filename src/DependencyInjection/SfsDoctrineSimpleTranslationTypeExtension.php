@@ -11,9 +11,6 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 class SfsDoctrineSimpleTranslationTypeExtension extends Extension implements PrependExtensionInterface
 {
-    /**
-     * {@inheritdoc}
-     */
     public function load(array $configs, ContainerBuilder $container)
     {
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../../config/services'));

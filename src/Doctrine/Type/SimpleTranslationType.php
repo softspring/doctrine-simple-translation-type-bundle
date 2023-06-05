@@ -15,17 +15,12 @@ use Softspring\DoctrineSimpleTranslationTypeBundle\Model\SimpleTranslation;
  */
 class SimpleTranslationType extends JsonType
 {
-    /**
-     * {@inheritDoc}
-     */
     public function getName()
     {
         return 'simple_translation';
     }
 
     /**
-     * {@inheritDoc}
-     *
      * @throws \Doctrine\DBAL\Types\ConversionException
      */
     public function convertToDatabaseValue($value, AbstractPlatform $platform)
@@ -38,8 +33,6 @@ class SimpleTranslationType extends JsonType
     }
 
     /**
-     * {@inheritDoc}
-     *
      * @throws \Doctrine\DBAL\Types\ConversionException
      */
     public function convertToPHPValue($value, AbstractPlatform $platform)
@@ -53,9 +46,6 @@ class SimpleTranslationType extends JsonType
         return SimpleTranslation::createFromArray($data);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function requiresSQLCommentHint(AbstractPlatform $platform)
     {
         return true;
