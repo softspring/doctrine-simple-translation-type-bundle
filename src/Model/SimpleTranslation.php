@@ -50,7 +50,7 @@ class SimpleTranslation implements \ArrayAccess
         $this->defaultLocale = $defaultLocale;
     }
 
-    public function translate(string $locale = null): string
+    public function translate(?string $locale = null): string
     {
         if (!empty($this->translations[$locale])) {
             return $this->translations[$locale];

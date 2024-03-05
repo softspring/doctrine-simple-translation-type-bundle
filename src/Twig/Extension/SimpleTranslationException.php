@@ -33,7 +33,7 @@ class SimpleTranslationException extends AbstractExtension
     /**
      * @param SimpleTranslation|array $translation
      */
-    public function translate($translation, string $locale = null): string
+    public function translate($translation, ?string $locale = null): string
     {
         if (is_array($translation)) {
             $translation = SimpleTranslation::createFromArray($translation);
