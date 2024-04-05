@@ -23,7 +23,7 @@ class SimpleTranslationType extends JsonType
     /**
      * @throws \Doctrine\DBAL\Types\ConversionException
      */
-    public function convertToDatabaseValue($value, AbstractPlatform $platform)
+    public function convertToDatabaseValue($value, AbstractPlatform $platform): ?string
     {
         if (!$value instanceof SimpleTranslation) {
             throw new \RuntimeException(sprintf('Expected %s class, but %s instance received', SimpleTranslation::class, get_class($value)));
@@ -35,7 +35,7 @@ class SimpleTranslationType extends JsonType
     /**
      * @throws \Doctrine\DBAL\Types\ConversionException
      */
-    public function convertToPHPValue($value, AbstractPlatform $platform)
+    public function convertToPHPValue($value, AbstractPlatform $platform): mixed
     {
         $data = parent::convertToPHPValue($value, $platform);
 
@@ -46,7 +46,7 @@ class SimpleTranslationType extends JsonType
         return SimpleTranslation::createFromArray($data);
     }
 
-    public function requiresSQLCommentHint(AbstractPlatform $platform)
+    public function requiresSQLCommentHint(AbstractPlatform $platform): bool
     {
         return true;
     }
