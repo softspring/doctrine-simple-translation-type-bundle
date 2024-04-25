@@ -2,7 +2,9 @@
 
 namespace Softspring\DoctrineSimpleTranslationTypeBundle\Model;
 
-class SimpleTranslation implements \ArrayAccess
+use ArrayAccess;
+
+class SimpleTranslation implements ArrayAccess
 {
     protected array $translations = [];
 

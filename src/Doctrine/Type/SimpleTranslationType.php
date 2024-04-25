@@ -3,7 +3,9 @@
 namespace Softspring\DoctrineSimpleTranslationTypeBundle\Doctrine\Type;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
+use Doctrine\DBAL\Types\ConversionException;
 use Doctrine\DBAL\Types\JsonType;
+use RuntimeException;
 use Softspring\DoctrineSimpleTranslationTypeBundle\Model\SimpleTranslation;
 
 /**
@@ -21,19 +23,19 @@ class SimpleTranslationType extends JsonType
     }
 
     /**
-     * @throws \Doctrine\DBAL\Types\ConversionException
+     * @throws ConversionException
      */
     public function convertToDatabaseValue($value, AbstractPlatform $platform): ?string
     {
         if (!$value instanceof SimpleTranslation) {
-            throw new \RuntimeException(sprintf('Expected %s class, but %s instance received', SimpleTranslation::class, get_class($value)));
+            throw new RuntimeException(sprintf('Expected %s class, but %s instance received', SimpleTranslation::class, get_class($value)));
         }
 
         return parent::convertToDatabaseValue($value->__toArray(), $platform);
     }
 
     /**
-     * @throws \Doctrine\DBAL\Types\ConversionException
+     * @throws ConversionException
      */
     public function convertToPHPValue($value, AbstractPlatform $platform): mixed
     {
