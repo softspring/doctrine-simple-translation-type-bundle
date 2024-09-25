@@ -1,17 +1,17 @@
+# Doctrine simple translation type bundle
+
+![Latest Stable](https://img.shields.io/packagist/v/softspring/doctrine-simple-translation-type-bundle?label=stable&style=flat-square)
+![Latest Unstable](https://img.shields.io/packagist/v/softspring/doctrine-simple-translation-type-bundle?label=unstable&style=flat-square&include_prereleases)
+![License](https://img.shields.io/packagist/l/softspring/doctrine-simple-translation-type-bundle?style=flat-square)
+![PHP Version](https://img.shields.io/packagist/dependency-v/softspring/doctrine-simple-translation-type-bundle/php?style=flat-square)
+![Downloads](https://img.shields.io/packagist/dt/softspring/doctrine-simple-translation-type-bundle?style=flat-square)
+[![CI](https://img.shields.io/github/actions/workflow/status/softspring/doctrine-simple-translation-type-bundle/php.yml?branch=5.3&style=flat-square&label=CI)](https://github.com/softspring/doctrine-simple-translation-type-bundle/actions/workflows/php.yml)
+
 This package provides a simple translation type for Doctrine, and its Symfony integration bundle.
 
-*This bundle is under development, more features will be added soon, and existing ones may change.*
+## Installation
 
-[![Latest Stable Version](https://poser.pugx.org/softspring/doctrine-simple-translation-type-bundle/v/stable.svg)](https://packagist.org/packages/softspring/doctrine-simple-translation-type-bundle)
-[![Latest Unstable Version](https://poser.pugx.org/softspring/doctrine-simple-translation-type-bundle/v/unstable.svg)](https://packagist.org/packages/softspring/doctrine-simple-translation-type-bundle)
-[![License](https://poser.pugx.org/softspring/doctrine-simple-translation-type-bundle/license.svg)](https://packagist.org/packages/softspring/doctrine-simple-translation-type-bundle)
-[![PHP Version Require](http://poser.pugx.org/softspring/doctrine-simple-translation-type-bundle/require/php)](https://packagist.org/packages/softspring/doctrine-simple-translation-type-bundle)
-[![Total Downloads](https://poser.pugx.org/softspring/doctrine-simple-translation-type-bundle/downloads)](https://packagist.org/packages/softspring/doctrine-simple-translation-type-bundle)
-[![Build status](https://github.com/softspring/doctrine-simple-translation-type-bundle/actions/workflows/php.yml/badge.svg?branch=5.3)](https://github.com/softspring/doctrine-simple-translation-type-bundle/actions/workflows/php.yml)
-
-# Installation
-
-## Applications that use Symfony Flex
+### Applications that use Symfony Flex
 
 Open a command console, enter your project directory and execute:
 
@@ -19,7 +19,7 @@ Open a command console, enter your project directory and execute:
 $ composer require softspring/doctrine-simple-translation-type-bundle
 ```
 
-# Configure
+## Configure
 
 Configure the Doctrine type:
 
@@ -30,9 +30,9 @@ Configure the Doctrine type:
             types:
                 simple_translation: 'Softspring\DoctrineSimpleTranslationTypeBundle\Doctrine\Type\SimpleTranslationType'
 
-# Usage
+## Usage
 
-## Configure entity that uses the type
+### Configure entity that uses the type
 
     use Doctrine\ORM\Mapping as ORM;
 
@@ -63,7 +63,7 @@ Configure the Doctrine type:
         $this->translatedName = $translatedName;
     }   
     
-## Manage the model
+### Manage the model
 
 The model class is *Softspring\DoctrineSimpleTranslationTypeBundle\Model\SimpleTranslation*.
 
@@ -95,13 +95,13 @@ The model implements ArrayAccess, so it's possible to use it as an array:
     $entity->getName()['en']; // returns 'Entity name'
     $entity->getName()['es']; // returns 'Nombre de la entidad'
     
-## Twig usage
+### Twig usage
 
     {{ entity.name|translate }} {# returns 'Nombre de la entidad' if app.request.locale is 'es' #}    
     {{ entity.name|translate('es') }} {# returns 'Nombre de la entidad' #}    
     {{ entity.name|translate('en') }} {# returns 'Entity name' #}    
 
-## Edit values in forms
+### Edit values in forms
 
 You can use the *Softspring\DoctrineSimpleTranslationTypeBundle\Form\SimpleTranslationType*
 
