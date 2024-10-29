@@ -5,7 +5,7 @@
 ![License](https://img.shields.io/packagist/l/softspring/doctrine-simple-translation-type-bundle?style=flat-square)
 ![PHP Version](https://img.shields.io/packagist/dependency-v/softspring/doctrine-simple-translation-type-bundle/php?style=flat-square)
 ![Downloads](https://img.shields.io/packagist/dt/softspring/doctrine-simple-translation-type-bundle?style=flat-square)
-[![CI](https://img.shields.io/github/actions/workflow/status/softspring/doctrine-simple-translation-type-bundle/php.yml?branch=5.4&style=flat-square&label=CI)](https://github.com/softspring/doctrine-simple-translation-type-bundle/actions/workflows/php.yml)
+[![CI](https://img.shields.io/github/actions/workflow/status/softspring/doctrine-simple-translation-type-bundle/ci.yml?branch=5.4&style=flat-square&label=CI)](https://github.com/softspring/doctrine-simple-translation-type-bundle/actions/workflows/ci.yml)
 
 This package provides a simple translation type for Doctrine, and its Symfony integration bundle.
 
